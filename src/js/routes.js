@@ -29,6 +29,10 @@
     .when('/images', {
       template: '<images></images>'
     })
+    
+    .when('/vendors', {
+      template: '<vendors></vendors>'
+    })
 
     .otherwise({redirectTo: '/'});
 

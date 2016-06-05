@@ -1,0 +1,29 @@
+<div class="container all-vendors">
+
+  <div class="row">
+    <h1>Vendors:</h1>
+
+      <ul class="all-vendors">
+        <li ng-repeat="vendor in vm.vendors">
+          
+          <div class="six columns">
+             
+              <div class="vendor" 
+                   style="background-image: url({{ vendor.backgroundUrl }}); 
+                          background-size: 100%; 
+                          color: white; 
+                          text-shadow: black 0px 0px 10px;">
+             
+                <h3 class="vendor-name center-text">{{ vendor.vendor_name }}</h3>
+                <h5 class="vendor-category center-text">{{ vendor.category}}
+             
+              </div>
+
+          </div> <!-- End of column -->
+        
+        </li>
+      </ul> <!-- End of ng-repeat -->
+
+  </div>
+
+</div>
