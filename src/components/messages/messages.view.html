@@ -16,13 +16,19 @@
         <option ng-repeat="category in vm.currCategories | orderBy: 'category'" value="{{ category.category }}">{{ category.category }}</option>
       </select>
     </div>
-    <div class="mkt-messages">
+    <div class="mkt-messages" >
+<!--
       <ul>
         <li ng-repeat="message in vm.currMsgs | filter: { category: vm.filter, vendor: vm.vendor } | orderBy: dt">
           <p ng-class="{'vendor-message':message.vendor}">{{ message.msg }}</p>
           <p>{{ message.category }}</p>
         </li>
       </ul>
+-->
+      <div ng-repeat="message in vm.currMsgs | filter: { category: vm.filter, vendor: vm.vendor } | orderBy: dt">
+        <p ng-class="{'vendor-message.top':message.vendor}">{{ message.msg }}</p>
+      </div>
+      
     </div>
     <div class="new-post">
       <div class="row">

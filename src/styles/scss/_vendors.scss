@@ -10,7 +10,7 @@
     height: 300px;
     width: 100%;
     box-sizing: border-box;
-    border: 10px solid white;
+    margin: 10px 15px 0px 15x;
     display: flex;
     flex-direction: column;
   }
@@ -39,8 +39,6 @@
       }
     }
   }
-
-}
 
 @media(max-width: 700px) {
   .go-button {

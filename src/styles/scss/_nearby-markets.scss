@@ -10,7 +10,7 @@
     text-align: center;
   }
   .market-image {
-    height: 300px;
+    height: 600px;
     width: 100%;
     background-size: cover;
     box-sizing: border-box;
@@ -22,7 +22,7 @@
     margin: auto;
     padding: 20px;
     color: white;
-    text-shadow: black 0px 0px 10px;
+    text-shadow: black 0px 0px 15px;
 //     background-color: rgba(255,255,255,0.7);
 
     p {
@@ -47,19 +47,19 @@
     }
   }
   li:nth-of-type(5n+1) .market-image {
-    background-image: url('/images/market1_muted.jpg');
+    background-image: url('/images/market1.jpeg');
   }
   li:nth-of-type(5n+2) .market-image {
-    background-image: url('/images/market2_muted.jpg');
+    background-image: url('/images/market2.jpg');
   }
   li:nth-of-type(5n+3) .market-image {
-    background-image: url('/images/market3_muted.jpg');
+    background-image: url('/images/market3.jpg');
   }
   li:nth-of-type(5n+4) .market-image {
-    background-image: url('/images/market4_muted.jpg');
+    background-image: url('/images/market4.jpg');
   }
   li:nth-of-type(5n+5) .market-image {
-    background-image: url('/images/market5_muted.jpg');
+    background-image: url('/images/market5.jpg');
   }
 
 }

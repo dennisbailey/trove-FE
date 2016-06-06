@@ -2,20 +2,20 @@
 
   <div class="row">
     
-    <h1 class="near-header">Near You:</h1>
+    <h1 class="near-header">Search Results:</h1>
     
       <ul class="all-markets-list">
     
         <li ng-repeat="market in vm.nearbyMarkets | orderBy: 'distance'">
     
-          <div class="six columns">
-    
+          <div class="twelve columns" style="margin-bottom: 30px;">
+            
+            <h3 class="mkt-name center-text"><a href="{{market.website}}">{{ market.market_name }}</a></h3>
+            
             <div class="market-image">
               
               <div class="market-text">
-                <h4 class="mkt-name center-text">{{ market.market_name }}</h4>
-                <h5 class="center-text">{{ market.city }}, {{ market.state }}</h5>
-                <h5 class="center-text">{{ market.distance | number:1 }} miles away</h5>
+                
               </div>
               
               <div class="row">
@@ -36,14 +36,41 @@
     
             </div>
             
-            <div class="go-button">
-              <a href="/#/info" 
-                 ng-click="vm.setId(market.id, market.fmid)">
-                <button class="button-primary 
-                               bttn-center"
-                               >Go</button>
-              </a>
+            <div class="row">
+              <div class="six columns">
+                <h4 class="center-text">Location <br> {{ market.city }}, {{ market.state }} <br> <a href="http://maps.google.com/maps?q={{market.lat}},{{market.lng}}">{{ market.distance | number:1 }} miles away</a></h4>
+              </div>
+              
+              <div class="six columns">
+                <h4 class="center-text">Season <br> {{ market.season_dt || 'Season Info Unavailable' }} <br> {{ market.season_time }}</h4>
+              </div>
             </div>
+            
+            <div class="row">
+            	<div class="six columns">
+<!--                 <a href="/#/info"> -->
+                  <button class="button-primary 
+                                 bttn-center"
+                          ng-click="vm.setId(market.id, market.fmid, market.market_name); vm.redirect('/info');"
+                          style="margin: auto;"
+                                 >Chat With This Market</button>
+<!--                 </a> -->
+            	</div>
+            	
+            	<div>
+<!--               	<a href="/#/vendors" > -->
+                   
+                   <button class="button-primary 
+                                  bttn-center"
+                          ng-click="vm.setId(market.id, market.fmid, market.market_name); vm.redirect('/vendors');"
+                          style="margin: auto;"
+                                  >Vendor Info</button>
+<!--                 </a> -->
+              	
+            	</div>
+<hr>
+            </div>
+                          
           </div>
           
         </li>

@@ -37,7 +37,7 @@
   text-align: center; }
 
 .all-markets .market-image {
-  height: 300px;
+  height: 600px;
   width: 100%;
   background-size: cover;
   box-sizing: border-box;
@@ -49,7 +49,7 @@
   margin: auto;
   padding: 20px;
   color: white;
-  text-shadow: black 0px 0px 10px; }
+  text-shadow: black 0px 0px 15px; }
   .all-markets .market-text p {
     text-align: center;
     font-weight: bold;
@@ -65,19 +65,19 @@
         background-color: #7cba0f; }
 
 .all-markets li:nth-of-type(5n+1) .market-image {
-  background-image: url("/images/market1_muted.jpg"); }
+  background-image: url("/images/market1.jpeg"); }
 
 .all-markets li:nth-of-type(5n+2) .market-image {
-  background-image: url("/images/market2_muted.jpg"); }
+  background-image: url("/images/market2.jpg"); }
 
 .all-markets li:nth-of-type(5n+3) .market-image {
-  background-image: url("/images/market3_muted.jpg"); }
+  background-image: url("/images/market3.jpg"); }
 
 .all-markets li:nth-of-type(5n+4) .market-image {
-  background-image: url("/images/market4_muted.jpg"); }
+  background-image: url("/images/market4.jpg"); }
 
 .all-markets li:nth-of-type(5n+5) .market-image {
-  background-image: url("/images/market5_muted.jpg"); }
+  background-image: url("/images/market5.jpg"); }
 
 @media (max-width: 700px) {
   .go-button {
@@ -128,43 +128,31 @@
 .all-vendors .mobile-buttons {
   visibility: hidden; }
 
-.all-vendors .near-header {
-  text-align: center; }
-
 .all-vendors .vendor {
   height: 300px;
   width: 100%;
   box-sizing: border-box;
-  border: 10px solid white;
+  margin: 10px 15px 0px 15x;
   display: flex;
   flex-direction: column; }
 
 .all-vendors .vendor-image {
   height: 300px;
-  width: 100%;
   background-size: cover;
   box-sizing: border-box;
   border: 10px solid white;
   display: flex;
   flex-direction: column; }
 
-.all-vendors .vendor-text {
-  margin: auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7); }
-  .all-vendors .vendor-text p {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0; }
-  .all-vendors .vendor-text .go-button {
-    text-align: center; }
-    .all-vendors .vendor-text .go-button button {
-      margin-top: 15px;
-      background-color: #6da30d;
-      color: white;
-      border: none; }
-      .all-vendors .vendor-text .go-button button:hover {
-        background-color: #7cba0f; }
+.all-vendors .go-button {
+  text-align: center; }
+  .all-vendors .go-button button {
+    margin-top: 15px;
+    background-color: #6da30d;
+    color: white;
+    border: none; }
+    .all-vendors .go-button button:hover {
+      background-color: #7cba0f; }
 
 @media (max-width: 700px) {
   .go-button {

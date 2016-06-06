@@ -2,9 +2,9 @@ angular
   .module('troveApp')
   .controller('NearbyCtrl', NearbyCtrl);
 
-NearbyCtrl.$inject = ['$timeout', '$window', '$rootScope', 'locationService'];
+NearbyCtrl.$inject = ['$timeout', '$window', '$rootScope', '$location', 'locationService'];
 
-function NearbyCtrl($timeout, $window, $rootScope, locationService) {
+function NearbyCtrl($timeout, $window, $rootScope, $location, locationService) {
 
   var vm = this;
 
@@ -12,9 +12,10 @@ function NearbyCtrl($timeout, $window, $rootScope, locationService) {
 
   vm.searchRadius = 10;
 
-  vm.setId = function(id, fmid) {
+  vm.setId = function(id, fmid, name) {
     $rootScope.id = id;
     $rootScope.fmid = fmid;
+    $rootScope.name = name;
   }
 
   vm.findNearbyMarkets = function() {
@@ -37,6 +38,10 @@ function NearbyCtrl($timeout, $window, $rootScope, locationService) {
     .then( function (result) { vm.nearbyMarkets = result.data.nearbyMarkets; })
 
     .catch( function (error) { return error; })
+  }
+  
+  vm.redirect = function(path) {
+    $location.path(path)
   }
 
   vm.search = function() {
